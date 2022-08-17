@@ -22,7 +22,7 @@ app = Flask(__name__,template_folder='./templates',static_folder='./static')
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/favicon.png')
+                               'favicon.ico', mimetype='images/favicon.png')
 
 @app.route('/', methods=['GET', 'POST'])
 def details_processing():
