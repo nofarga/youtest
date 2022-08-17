@@ -1,6 +1,6 @@
 from datetime import date
 from pyexpat import model
-from flask import Flask,url_for,render_template,request,url_for,redirect,flash
+from flask import Flask,url_for,render_template,request,url_for,redirect,flash,send_from_directory
 from werkzeug.utils import secure_filename
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier # Import Decision Tree Classifier
@@ -15,6 +15,12 @@ import datetime
 
 
 app = Flask(__name__,template_folder='./templates',static_folder='./static')
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='images/favicon.png')
 
 # @app.route('youtest1.herokuapp.com', methods=['GET', 'POST'])
 @app.route('/', methods=['GET', 'POST'])
