@@ -14,7 +14,7 @@ import numpy
 import datetime
 
 
-app = Flask(__name__,template_folder='./app/templates',static_folder='./app/static')
+app = Flask(__name__,template_folder='./templates',static_folder='./static')
 
 # @app.route('youtest1.herokuapp.com', methods=['GET', 'POST'])
 @app.route('/', methods=['GET', 'POST'])
@@ -155,7 +155,7 @@ if __name__ == "__main__":
 
 def add_row(arr):
 
-    filename = './app/FINAL.xlsx'
+    filename = './FINAL.xlsx'
     wb = openpyxl.load_workbook(filename=filename)
     sheet = wb['Sheet1']
     sheet.append(arr)
@@ -163,8 +163,8 @@ def add_row(arr):
 
 def pick():
     
-    database = pd.read_excel('./app/FINAL.xlsx', dtype=float).to_numpy()
-    file=open('./app/random_forest.pkcls', "rb")
+    database = pd.read_excel('./FINAL.xlsx', dtype=float).to_numpy()
+    file=open('./random_forest.pkcls', "rb")
     pkl = pd.read_pickle(file)
 
     dict_bin_a={0:[0,0],1:[1,0]}
