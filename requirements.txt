@@ -3,4 +3,4 @@ Werkzeug==2.1.2
 pandas==1.4.3
 scikit-learn==1.1.1
 openpyxl
-os
+os-sys==2.1.4
