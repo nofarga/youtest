@@ -3,10 +3,8 @@ from pyexpat import model
 from flask import Flask,url_for,render_template,request,url_for,redirect,flash,send_from_directory
 from werkzeug.utils import secure_filename
 import pandas as pd
-from sklearn.tree import DecisionTreeClassifier # Import Decision Tree Classifier
 from sklearn.model_selection import train_test_split # Import train_test_split function
-from sklearn import metrics #Import scikit-learn metrics module for accuracy calculation
-import pickle
+# import pickle
 import openpyxl
 from sklearn.datasets import load_iris
 from sklearn.metrics import accuracy_score
