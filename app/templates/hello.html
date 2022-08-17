@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTest</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="testbox">
+      <form method=post enctype=multipart/form-data action="/">
+        <div class="banner">
+        </div>
+        <h2>מילוי פרטי הקליפ/השיר</h2>
+        <div class="item">
+          <p>שם השיר</p>
+          <input type="text" name="name_song"/>
+        </div>
+        <div class="item">
+          <p>זמר</p>
+            <select name="singer" class="name-item">
+              <option value="choice">לחץ לבחירה</option>
+              <option value="netabarzilai">נטע ברזילי</option>
+              <option value="staticbenal">סטטיק ובן אל</option>
+              <option value="dennislloyd">דניס לויד</option>
+              <option value="omeradam">עומר אדם</option>
+              <option value="edenhason">עדן חסון</option>
+              <option value="eyalgolan">אייל גולן</option>
+              <option value="edenbenzaken">עדן בן זקן</option>
+              <option value="stephenleger">סטפן לגר</option>
+              <option value="itaylevi">איתי לוי</option>
+              <option value="noakirel">נועה קירל</option>
+              <option value="other">אחר</option>
+            </select>
+        </div>
+
+        <div class="item">
+          <p>שנות ותק-יוצר</p>
+          <output id="num">0</output>
+          <input type="range" name="seniority" min="0" max="100" oninput="num.value = this.value"/>
+        </div>
+        <div class="item">
+          <p>משך הסרטון</p>
+          <input type="num" name="duration"/>
+        </div>
+        <div class="item">
+          <p>תאריך הוצאה</p>
+          <input type="date" name="data"/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+          <p>כתיבה</p>
+            <select name="author" class="name-item">
+              <option value="choice">לחץ לבחירה</option>
+              <option value="staticbenal">סטטיק ובן אל</option>
+              <option value="stavbeger">סתיו בגר</option>
+              <option value="tamardyonatank">תמר יהלומי ויונתן קלימי</option>
+              <option value="aviohion">אבי אוחיון</option>
+              <option value="dolevrpenh">דולב רם ופן חזות</option>
+              <option value="edenhason">עדן חסון</option>
+              <option value="dodornmadali">דורון מדלי</option>
+              <option value="gil">גיל ויין</option>
+              <option value="other">אחר</option>
+            </select>
+        </div>
+        <div class="item">
+          <p>מלחין</p>
+            <select name="composer" class="name-item">
+              <option value="choice">לחץ לבחירה</option>
+              <option value="staticbenal">סטטיק ובן אל</option>
+              <option value="stavbeger">סתיו בגר</option>
+              <option value="tamardyonatank">תמר יהלומי ויונתן קלימי</option>
+              <option value="aviohion">אבי אוחיון</option>
+              <option value="dolevrpenh">דולב רם ופן חזות</option>
+              <option value="edenhason">עדן חסון</option>
+              <option value="dodornmadali">דורון מדלי</option>
+              <option value="gil">גיל ויין</option>
+              <option value="other">אחר</option>
+            </select>
+        </div>
+        <div class="item">
+          <p>מפיק</p>
+            <select name="producer" class="name-item">
+              <option value="choice">לחץ לבחירה</option>
+              <option value="stavbeger">סתיו בגר</option>
+              <option value="yardenj">ירדן ג'ורדי פלג</option>
+              <option value="yakovlimai">יעקב למאי</option>
+              <option value="yanonyahal">ינון יהל</option>
+              <option value="other">אחר</option>
+            </select>
+        </div>
+        <div class="item">
+          <p>חברת תקליטים</p>
+          <select name="records" class="name-item">
+            <option value="choice">לחץ לבחירה</option>
+            <option value="NMC">NMC תקליטים</option>
+            <option value="tedi">טדי הפקות</option>
+            <option value="liam">ליאם הפקות</option>
+            <option value="unicel">יוניסל</option>
+            <option value="Mobile1music">Mobile 1 music</option>
+            <option value="other">אחר</option>
+          </select>
+          </div>
+        <div class="item">
+          <p>סגנון מוזיקה</p>
+          <select name="style" class="name-item">
+            <option value="choice'"">לחץ לבחירה</option>
+            <option value="pop">פופ</option>
+            <option value="dance">דאנס</option>
+            <option value="rap">ראפ</option>
+            <option value="middlee">ים תיכוני</option>
+            <option value="balada">בלדה</option>
+            <option value="latin">לטיני/ברזילאי</option>
+            <option value="other">אחר</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-checkbox" >
+          <p>פרסים ותארים</p>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" name="artist_Year">
+                  <span class="toggle__label">
+                    <span class="toggle__text" >זמר השנה</span>
+                  </span>
+                </label>
+                <label class="toggle" >
+                  <input class="toggle__input" type="checkbox" name="song_Year">
+                  <span class="toggle__label">
+                    <span class="toggle__text">שיר השנה</span>
+                  </span>
+                </label>
+              </div>
+              <br>  
+        <div class="form-checkbox" >
+          <p>שפה</p>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" name="language_eng">
+                  <span class="toggle__label">
+                    <span class="toggle__text">אנגלית</span>
+                  </span>
+                </label>
+                <label class="toggle" >
+                  <input class="toggle__input" type="checkbox" checked name="language_heb">
+                  <span class="toggle__label">
+                    <span class="toggle__text">עברית</span>
+                  </span>
+                </label>
+              </div>
+              <br>
+              <div class="form-checkbox" >
+          <p>סוג הקליפ</p>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" name="video">
+                  <span class="toggle__label">
+                    <span class="toggle__text" >וידיאו</span>
+                  </span>
+                </label>
+                <label class="toggle" >
+                  <input class="toggle__input" type="checkbox" name="image">
+                  <span class="toggle__label">
+                    <span class="toggle__text">תמונה</span>
+                  </span>
+                </label>
+              </div>
+              <br>
+            <div class="form-checkbox" >
+          <p>האם המילים מצוינות ביוטיוב?</p>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" name="word_y">
+                  <span class="toggle__label">
+                    <span class="toggle__text">כן</span>
+                  </span>
+                </label>
+                <label class="toggle" >
+                  <input class="toggle__input" type="checkbox" name="word_n">
+                  <span class="toggle__label">
+                    <span class="toggle__text">לא</span>
+                  </span>
+                </label>
+              </div>
+          
+        <form>
+        <!-- <div class="item">
+          <p>העלאת הקליפ</p>
+          <input type="file" name="file">
+        <input type=submit value=submit class="btn-block"> 
+        </form>
+        </div> -->
+        <input type=submit value="הצג תוצאה" class="btn-block"> 
+      </form>
+    </div>
+  </body>
+</html>
