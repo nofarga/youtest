@@ -24,7 +24,7 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='images/favicon.png')
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/') #methods=['GET', 'POST'])
 def details_processing():
     arr=[]
     if request.method == 'POST':
