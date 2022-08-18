@@ -1,10 +1,5 @@
 # Test comment
-s3cmd
-wget
-libgl1
-python-opencv
-libsm6
-libxrender1
-libfontconfig1
-libice6
-libsm1
+libglib2.0-0 
+libsm6 
+libxrender1 
+libxext6
