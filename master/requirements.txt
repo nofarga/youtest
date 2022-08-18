@@ -6,3 +6,4 @@ openpyxl
 gunicorn
 Orange3==3.32.0
 opencv-python-headless
+PyQt5

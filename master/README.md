@@ -17,3 +17,9 @@
 
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
+
+
+git add -A
+git commit -m "fix 5 commit"
+git branch -M main
+ git push origin main

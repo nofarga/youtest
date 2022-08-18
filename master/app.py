@@ -12,6 +12,7 @@ import numpy
 import datetime
 import os
 # import Orange
+import PyQt5.QtCore, PyQt5.QtGui, PyQt5.QtWidgets
 
 app = Flask(__name__,template_folder='./templates',static_folder='./static')
 
