@@ -1,5 +1,5 @@
-# Test comment
-libglib2.0-0 
-libsm6 
-libxrender1 
-libxext6
+from turtle import update
+
+
+update
+libgl1-mesa-glx
