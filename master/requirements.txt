@@ -4,6 +4,3 @@ pandas==1.4.3
 scikit-learn==1.1.1
 openpyxl
 gunicorn
-Orange3==3.32.0
-opencv-python-headless
-PyQt5
