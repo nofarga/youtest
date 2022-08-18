@@ -2,3 +2,9 @@
 s3cmd
 wget
 libgl1
+python-opencv
+libsm6
+libxrender1
+libfontconfig1
+libice6
+libsm1
